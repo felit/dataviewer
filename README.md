@@ -1,41 +1,32 @@
 data-visualize
-===
-ÒÀÀµµÄ¼¼ÊõÒªµã
----
-d3
-highcharts
-react or angularjs
-nodejs
+ä¾èµ–çš„æŠ€æœ¯è¦ç‚¹
 
-¿ÉÊµÏÖºó¶Ë´æ´¢
----
-elasticsearch
-mongodb
-jdbc
+d3 highcharts react or angularjs nodejs
 
-Ö§³ÖÒ³ÃæĞÎÊ½
----
-¸÷ÖÖÍ¼±í
+å¯å®ç°åç«¯å­˜å‚¨
 
-¼ò½é
----
-×¨×¢ÓÚBIµÄÊı¾İ¿ÉÊÓ»¯
+elasticsearch mongodb jdbc
+
+æ”¯æŒé¡µé¢å½¢å¼
+
+å„ç§å›¾è¡¨
+
+ç®€ä»‹
+
+ä¸“æ³¨äºBIçš„æ•°æ®å¯è§†åŒ–
 
 TODO
----
-ÊµÏÖelasticsearchµÄ¿ÉÊÓ»¯´¦Àí
----
 
-À©Õ¹ĞÎÊ½
----
-²å¼ş
-»Øµ÷
+å®ç°elasticsearchçš„å¯è§†åŒ–å¤„ç†
 
-²»Ö§³ÖÄÚÈİ
----
-È¨ÏŞ
+æ‰©å±•å½¢å¼
 
+æ’ä»¶ å›è°ƒ
+
+ä¸æ”¯æŒå†…å®¹
+
+æƒé™
 
 License
----
+
 MIT
