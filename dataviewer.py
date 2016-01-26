@@ -6,6 +6,7 @@ app = Flask(__name__)
 from weixin import Weixin
 from data_adapter import *
 
+
 @app.route('/config')
 def config():
     return render_template('config.html')
@@ -20,9 +21,11 @@ def index():
 def table():
     return render_template('table.html')
 
+
 @app.route('/layout')
-def table():
+def layout():
     return render_template('layout.html')
+
 
 @app.route('/json')
 def json():
@@ -31,6 +34,11 @@ def json():
     print(zip(*result))
     TableAdapter().adapter(result)
     return jsonify({'result': result})
+
+
+@app.route('/datasource_config')
+def datasource_config():
+    return render_template('datasource.html')
 
 
 if __name__ == '__main__':
