@@ -1,3 +1,8 @@
+
+install
+---
+pip install flask pymongo elasticsearch
+
 data-visualize
 依赖的技术要点
 
