@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+{% block body %}
+    <div class="ui container">
+        <form class="ui form" action="/config_list">
+            <div class="six wide field">
+                <label>数据源名称</label>
+                <input type="text">
+            </div>
+            <div class="six wide field">
+                <label>数据库类型</label>
+                <select class="ui fluid dropdown">
+                    <option value="org.postgresql.Driver">Postgresql</option>
+                    <option value="org.apache.hadoop.hive.jdbc.HiveDriver">Impala</option>
+                </select>
+            </div>
+            <div class="field">
+                <label>JDBC URL</label>
+                <input type="text" name="url" placeholder="例如：jdbc:postgresql://127.0.0.1:5432/test">
+            </div>
+            <div class="field">
+                schema
+            </div>
+            <div class="field">
+                <label>用户名</label>
+                <input type="text">
+            </div>
+            <div class="field">
+                <label>密码</label>
+                <input type="password">
+            </div>
+            <input type="submit" class="ui submit primary button" value="保存"/>
+            <div class="ui submit primary button">保存并新建数据源</div>
+            <div class="ui submit button">取消</div>
+            <div class="ui submit secondary button">测试</div>
+        </form>
+    </div>
+    <script type="text/javascript">
+        $('.ui.dropdown').dropdown();
+    </script>
+{% endblock %}

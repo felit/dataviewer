@@ -1,15 +1,15 @@
+#-*- coding:utf8 -*-
 from flask import Flask
 from flask import jsonify
 from flask import render_template
 
 app = Flask(__name__)
-from weixin import Weixin
 from data_adapter import *
 
 
 @app.route('/config')
 def config():
-    return render_template('config.html')
+    return render_template('react_test.html')
 
 
 @app.route('/')
@@ -27,13 +27,19 @@ def layout():
     return render_template('layout.html')
 
 
+@app.route('/datasource_config')
+def form():
+    return render_template('datasource_config.html')
+
+# 保有存配置信息
+@app.route('/config_list')
+def config_list():
+    return render_template('datasource_config_list.html')
+
+
 @app.route('/json')
 def json():
-    result = Weixin().macro_channel()
-    print result
-    print(zip(*result))
-    TableAdapter().adapter(result)
-    return jsonify({'result': result})
+    pass
 
 
 @app.route('/datasource_config')
