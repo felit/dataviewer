@@ -23,6 +23,13 @@ elasticsearch mongodb jdbc(postgresql、kylin、hive)
 TODO
 ---
 实现elasticsearch的可视化处理
+每格图表添加汇总信息
+添加搜索条件
+日报表汇总页面添加日期
+周后表汇总页面添加周的日期选项
+添加布局拖拽功能
+全局日期选择：日、周、月、年
+表格下载按钮、汇总信息与图表的下载按钮与汇总信息放置位置不同
 
 扩展形式
 ---
