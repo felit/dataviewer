@@ -42,8 +42,8 @@ def json():
     pass
 
 
-@app.route('/datasource_config')
-def datasource_config():
+@app.route('/datasource')
+def datasource():
     return render_template('datasource.html')
 
 

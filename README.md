@@ -36,7 +36,7 @@ TODO
 ---
 查询
 配置分为三部分：数据源、适配、页面
-数据源的三层抽象，增加灵活性：environment、group、datasource
+数据源的三层抽象，增加灵活性：environment、group、datasource、query
 数据模型与展现模型进行适配
 
 

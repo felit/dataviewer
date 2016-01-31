@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>报表首页</title>
+    <script src="/static/jquery.js" type="text/javascript"></script>
+    <script src="/static/semantic/semantic.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" class="ui" href="/static/semantic/semantic.css">
+    <script src="/static/semantic/components/checkbox.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" class="ui" href="/static/semantic/components/checkbox.min.css">
+    <script src="/static/semantic/components/search.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" class="ui" href="/static/semantic/components/search.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="/static/semantic/components/reset.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="/static/application.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="/static/semantic/components/menu.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="/static/semantic/components/dropdown.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="/static/semantic/components/popup.min.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="/static/semantic/components/transition.min.css">
+    <script type="text/javascript" src="/static/semantic/components/dropdown.js"></script>
+    <script type="text/javascript" src="/static/semantic/components/popup.js"></script>
+    <script type="text/javascript" src="/static/semantic/components/transition.js"></script>
+</head>
+<body>
+<div class="ui grid container">
+    <div class="row">
+        <div class="column">
+            <button class="ui primary button">
+                Follow
+            </button>
+            <button class="ui secondary button">
+                Secondary
+            </button>
+            <div class="ui vertical animated button" tabindex="0">
+                <div class='visible content'>下一页</div>
+                <div class="hidden content">
+                    <i class="right arrow icon"></i>
+                </div>
+            </div>
+            <div class="ui labeled button mini" tabindex="0">
+                <div class="ui red button mini">
+                    <i class="heart icon"></i> like
+                </div>
+                <a class="ui basic label red left pointing">
+                    2,048
+                </a>
+            </div>
+            <div class="ui buttons">
+                <button class="ui button">One</button>
+                <button class="ui button">Two</button>
+                <button class="ui button">Three</button>
+            </div>
+            <div class="ui buttons">
+                <button class="ui button">Cancel</button>
+                <div class="or"></div>
+                <button class="ui positive button">Save</button>
+            </div>
+            <button class="circular ui icon button">
+                <i class="icon settings"></i>
+            </button>
+            <div class="ui vertical buttons">
+                <button class="ui button">Feed</button>
+                <button class="ui button">Messages</button>
+                <button class="ui button">Events</button>
+                <button class="ui button">Photos</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ui menu" style="border-radius:0">
+    <div class="header item">BI报表系统</div>
+    <div class="right menu">
+        <a class="layout icon item">配置</a>
+    </div>
+</div>
+<table class="ui small table">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Status</th>
+        <th>Notes</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>John</td>
+        <td>Approved</td>
+        <td>None</td>
+    </tr>
+    <tr>
+        <td>Jamie</td>
+        <td>Approved</td>
+        <td>Requires call</td>
+    </tr>
+    <tr>
+        <td>Jill</td>
+        <td>Denied</td>
+        <td>None</td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+        <th>3 People</th>
+        <th>2 Approved</th>
+        <th></th>
+    </tr>
+    </tfoot>
+</table>
+</body>
+</html>
