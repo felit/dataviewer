@@ -1,4 +1,4 @@
-#-*- coding:utf8 -*-
+# -*- coding:utf8 -*-
 from flask import Flask
 from flask import jsonify
 from flask import render_template
@@ -31,6 +31,7 @@ def layout():
 def form():
     return render_template('datasource_config.html')
 
+
 # 保有存配置信息
 @app.route('/config_list')
 def config_list():
@@ -40,6 +41,11 @@ def config_list():
 @app.route('/json')
 def json():
     pass
+
+
+@app.route('/semantic/menu')
+def menu():
+    return render_template('semantic/menu.html')
 
 
 @app.route('/datasource')

@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+{% block body %}
+    <div class="ui three item menu">
+        <a class="active item">配置信息</a>
+        <a class="item">设置</a>
+        <div class="ui right dropdown item">
+            设置
+            <i class="dropdown icon"></i>
+            <div class="menu">
+                <a class="item">数据源</a>
+                <a class="item">权限配置</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="ui top attached menu">
+        <a class="item">
+            Section 1
+        </a>
+        <a class="item active">
+            Section 2
+        </a>
+    </div>
+    <div class="ui attached segment">
+        <p>hello</p>
+    </div>
+    <div class="ui compact bottom attached menu">
+        <a class="down item">
+            Section 1
+        </a>
+        <a class="item">
+            Section 2
+        </a>
+    </div>
+    <script type="text/javascript">
+        $('.dropdown').dropdown()
+    </script>
+{% endblock %}
