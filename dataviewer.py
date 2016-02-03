@@ -52,7 +52,13 @@ def menu():
 def datasource():
     return render_template('datasource.html')
 
+@app.route('/chart/config')
+def chart_config():
+    return render_template('chart/two-dimension.html')
 
+@app.route('/monitor')
+def monitor():
+    return render_template('monitor/index.html')
 if __name__ == '__main__':
     app.debug = True
     app.run(host='0.0.0.0')

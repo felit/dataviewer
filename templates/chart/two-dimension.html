@@ -1,4 +1,41 @@
 {% extends 'layout.html' %}
 {% block body %}
+    <div class="ui segment">
+    <form>
+        <select class="ui selection dropdown">
+            <option>default</option>
+            <option>xiaoya</option>
+            <option>daya</option>
+        </select>
+        variables:
+        <select class="ui selection dropdown">
+            <option>begin_time</option>
+            <option>end_time</option>
+        </select>
+        <button class="ui icon layout">test query</button>
+      <textarea class="ui segment">
+          SELECT * FROM userinfo
+      </textarea>
+      <div class="ui menu attached top">
+          <div class="item">brand_id:商户ID</div>
+          <div class="item">login_count:登录数量</div>
+          <a class="right item">
+              <i class="ui icon add"></i>
+              add column
+          </a>
+      </div>
+        <div class="ui segment attached">
+     <select class="ui compact selection dropdown">
+         <option>dimension</option>
+         <option>feature</option>
+         </select>
+            default value
+     <select class="ui selection dropdown">
+         <option>0</option>
+         <option>nothing</option>
+         </select>
+            </div>
+    </form>
+    </div>
 
 {% endblock %}
