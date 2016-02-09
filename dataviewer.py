@@ -6,7 +6,7 @@ from flask import render_template
 app = Flask(__name__)
 from data_adapter import *
 
-
+from models.datasource import DataSource
 @app.route('/config')
 def config():
     return render_template('react_test.html')
@@ -31,11 +31,12 @@ def layout():
 def form():
     return render_template('datasource_config.html')
 
-
+from models.meta_data import MetaData
 # 保有存配置信息
 @app.route('/config_list')
 def config_list():
-    return render_template('datasource_config_list.html')
+    datasources = MetaData().get_all_datasource()
+    return render_template('datasource_config_list.html',datasources = datasources)
 
 
 @app.route('/json')

@@ -10,6 +10,18 @@
         </tr>
         </thead>
         <tbody>
+        {% for ds in datasources %}
+            <tr>
+            <td class="one wide">
+                <div class="ui fitted toggle checkbox">
+                    <input type="checkbox"> <label></label>
+                </div>
+            </td>
+            <td> {{ ds.title }} </td>
+            <td> {{ ds.url }} </td>
+            <td> {{ ds.url }} </td>
+            </tr>
+        {% endfor %}
         <tr>
             <td class="one wide">
                 <div class="ui fitted toggle checkbox">
