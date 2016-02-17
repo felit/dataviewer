@@ -1,6 +1,6 @@
 {% extends 'layout.html' %}
 {% block body %}
-    <table class="ui teal small celled table">
+    <table class="ui teal small celled table selectable">
         <thead>
         <tr>
             <th>是否启用</th>
@@ -12,31 +12,18 @@
         <tbody>
         {% for ds in datasources %}
             <tr>
-            <td class="one wide">
-                <div class="ui fitted toggle checkbox">
-                    <input type="checkbox"> <label></label>
-                </div>
-            </td>
-            <td> {{ ds.title }} </td>
-            <td> {{ ds.url }} </td>
-            <td> {{ ds.url }} </td>
+                <td class="one wide">
+                    <input type="radio" class="ui radio checkbox" name="data">
+                </td>
+                <td> {{ ds.title }} </td>
+                <td> {{ ds.url }} </td>
+                <td>
+                    <div class="ui fitted toggle checkbox">
+                        <input type="checkbox"> <label></label>
+                    </div>
+                </td>
             </tr>
         {% endfor %}
-        <tr>
-            <td class="one wide">
-                <div class="ui fitted toggle checkbox">
-                    <input type="checkbox"> <label></label>
-                </div>
-            </td>
-            <td>
-                {#                <div class="ui ribbon label">First</div>#}
-                小雅线上数据源
-            </td>
-            <td>jdbc:postgresql://192.168.232.11:5432/</td>
-            <td>
-                线上
-            </td>
-        </tr>
         </tbody>
         <tfoot>
         <tr>
@@ -56,9 +43,8 @@
                 <a class="ui right floated primary labeled icon button" href="/datasource_config">
                     <i class="table icon"></i> 添加数据源
                 </a>
-                 <a class="ui right floated primary  icon button" href="/datasource_config">
-                     配置选中数据源
-{#                     改为选中 双击 #}
+                <a class="ui right floated primary  icon button" href="/datasource_config">
+                    配置选中数据源
                 </a>
             </th>
         </tr>
