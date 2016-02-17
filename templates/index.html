@@ -1,11 +1,31 @@
 {% extends "layout.html" %}
 {% block body %}
+    <div class="ui left vertical inverted sidebar labeled icon menu">
+        <a class="item" href="/">
+            <i class="bar chart icon"></i>
+            报表
+        </a>
+        <a class="item" href="/datasource_config">
+            <i class="block database icon"></i>
+            数据源配置
+        </a>
+        <a class="item" href="/monitor">
+            <i class="laptop icon"></i>
+            监控
+        </a>
+    </div>
     <div class="full height">
         <div class="toc">
             <div class="ui vertical inverted sticky menu fixed top black">
                 <div class="item">
                     <div class="header"> 报表1</div>
                     <div class="menu">
+                        <div class="item">
+                            <a class="" href="javascript:$('.ui.labeled.icon.sidebar') .sidebar('toggle') ;">
+                                <i class="sidebar icon"></i>
+                                配置
+                            </a>
+                        </div>
                         <div class="item">
                             <a class="" href="/">积份商城</a></div>
                         <div class="item">
@@ -94,7 +114,7 @@
                                     }
                                 },
                                 axis: {
-{#                                    rotated: true#}
+                                    {#                                    rotated: true#}
                                 }
                             });
                         </script>
