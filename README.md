@@ -63,6 +63,7 @@ TODO 特性
 字段映射(value->title)
 多个图表
 
++图表与图表之间相互通信
 排序，分页
 
 roadmap
