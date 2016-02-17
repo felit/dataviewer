@@ -12,12 +12,14 @@
                 <option>begin_time</option>
                 <option>end_time</option>
             </select>
-            <button class="ui icon layout">test query</button>
-            <textarea class="ui segment">
-                SELECT * FROM userinfo
+            <a class="" id="test-query">
+                <li class="ui icon layout"></li>
+                test query</a>
+            <textarea class="ui segment" id="sql-statement">
+                SELECT * FROM xiaoya_crm.profession
             </textarea>
 
-            <div class="ui menu attached top">
+            <div class="ui menu attached top" id="columns">
                 <div class="item">brand_id:商户ID</div>
                 <div class="item">login_count:登录数量</div>
                 <div class="item">total:虚拟列</div>
@@ -37,6 +39,7 @@
                     <option>nothing</option>
                 </select>
                 <br/>
+
                 <div class="ui menu">
                     <a class="item">
                         <i class="ui icon add"></i>
@@ -52,4 +55,19 @@
         </form>
     </div>
 
+    <script type="text/javascript">
+        $('#test-query').click(function () {
+            var sql = $('#sql-statement').val()
+            $.ajax('/test_query', {
+                data: {query: sql, datasource: 'xiaoya'},
+                method: 'POST',
+                success: function (data) {
+                    console.log(data)
+                    for (var i in data.description) {
+                        $('#columns').append(' <div class="item">' + data.description[i] + '</div>')
+                    }
+                }
+            })
+        })
+    </script>
 {% endblock %}
