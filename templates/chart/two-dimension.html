@@ -1,5 +1,6 @@
 {% extends 'layout.html' %}
 {% block body %}
+    {% include 'chart/dialog.html' %}
     <div class="ui segment">
         <form>
             <select class="ui selection dropdown">
@@ -13,7 +14,12 @@
             <textarea class="ui segment" id="sql-statement" cols="100" rows="6">
                 SELECT * FROM xiaoya_crm.profession
             </textarea>
-
+            <div class="ui segment">
+                示例
+            </div>
+            <div class="" id="datasources">
+                此图表应用的数据源: 字段有着色
+            </div>
             <br/>
             {#variables:
             <select class="ui selection dropdown">
@@ -67,6 +73,10 @@
                                 </select>
                             </div>
                             <div class="field">
+                                <label>是否隐藏</label> {#在展现时不显示，但在数据关联时使用#}
+                                <input type="radio">
+                            </div>
+                            <div class="field">
                                 <label>默认值</label>
                                 <select class="ui selection dropdown">
                                     <option>0</option>
@@ -77,7 +87,7 @@
                         <div class="one fields">
                             <div class="field">
                                 <div class="ui menu">
-                                    <a class="item">
+                                    <a class="item" href="javascript:void(0)" onclick="$('#fields-link').modal('show')">
                                         <i class="ui icon add"></i>
                                         添加值映射
                                     </a>
