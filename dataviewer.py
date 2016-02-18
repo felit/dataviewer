@@ -60,7 +60,9 @@ def datasource():
 
 @app.route('/chart/config')
 def chart_config():
-    return render_template('chart/two-dimension.html')
+    datasources = MetaData().get_all_datasource()
+    print(datasources)
+    return render_template('chart/two-dimension.html', datasources=datasources)
 
 
 @app.route('/monitor')
@@ -79,7 +81,7 @@ def test_query():
 
     return jsonify({'result': query, 'from': 'server',
                     'columns': [{}],
-                    'description':[row[0] for row in cursor.description],
+                    'description': [row[0] for row in cursor.description],
                     'example_data': data
     })
 

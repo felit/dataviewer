@@ -3,14 +3,14 @@
     <div class="ui segment">
         <form>
             <select class="ui selection dropdown">
-                <option>default</option>
-                <option>xiaoya</option>
-                <option>daya</option>
+                {% for i in datasources %}
+                    <option>{{ i.title }}</option>
+                {% endfor %}
             </select>
 
             <br/>
 
-            <textarea class="ui segment" id="sql-statement" cols="100" rows="10">
+            <textarea class="ui segment" id="sql-statement" cols="100" rows="6">
                 SELECT * FROM xiaoya_crm.profession
             </textarea>
 
@@ -45,33 +45,60 @@
                     </div>
                 </div>
                 <div class="thirteen wide column">
-                    <div class="ui input">
-                        <input type="text" placeholder="商户ID">
-                        <br/>
-                        <select class="ui compact selection dropdown">
-                            <option>dimension</option>
-                            <option>feature</option>
-                        </select>
-                        默认值
-                        <select class="ui selection dropdown">
-                            <option>0</option>
-                            <option>nothing</option>
-                        </select>
-                        <br/>
+                    <div class="ui form input">
+                        <div class="four fields">
+                            <div class="field">
+                                <label>字段名称</label>
+                                <input type="text" placeholder="商户ID">
+                            </div>
+                            <div class="field">
+                                <label>数据源</label>
+                                <select class="ui selection dropdown">
+                                    <option>default</option>
+                                    <option>xiaoya</option>
+                                    <option>daya</option>
+                                </select>
+                            </div>
+                            {#                        </div>#}
+                            {#                        <div class="two fields">#}
+                            <div class="field">
+                                <label>字段类型</label>
+                                <select class="ui  selection dropdown"> {#compact#}
+                                    <option>dimension</option>
+                                    <option>feature</option>
+                                </select>
+                            </div>
+                            <div class="field">
+                                <label>默认值</label>
+                                <select class="ui selection dropdown">
+                                    <option>0</option>
+                                    <option>nothing</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="one fields">
+                            <div class="field">
 
-                        <div class="ui menu">
-                            <a class="item">
-                                <i class="ui icon add"></i>
-                                添加值映射
-                            </a>
-                            <br/>
-                            <a class="item">
-                                <i class="ui icon add"></i>
-                                关联新字段
-                            </a>
+                                <div class="ui menu">
+                                    <a class="item">
+                                        <i class="ui icon add"></i>
+                                        添加值映射
+                                    </a>
+                                    <br/>
+                                    <a class="item">
+                                        <i class="ui icon add"></i>
+                                        关联新字段
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="ui buttons">
+                <a class="ui positive button">
+                    保存
+                </a>
             </div>
         </form>
     </div>
