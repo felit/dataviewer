@@ -22,6 +22,8 @@ elasticsearch mongodb jdbc(postgresql、kylin、hive)
 
 TODO
 ---
+实现postgresql可视化
+实现多表关联
 实现elasticsearch的可视化处理
 每格图表添加汇总信息
 添加搜索条件
